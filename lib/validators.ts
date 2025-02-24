@@ -1,10 +1,10 @@
 import { z } from 'zod';
-import { formatNumberwithDecimal } from './utils';
+import { formatNumberWithDecimal } from './utils';
 
 const currency = z
   .string()
   .refine(
-    (value) => /\d+(\.\d{2})?$/.test(formatNumberwithDecimal(Number(value))),
+    (value) => /\d+(\.\d{2})?$/.test(formatNumberWithDecimal(Number(value))),
     'Price must have exactly two decimal places'
   );
 // Insert Product schema
