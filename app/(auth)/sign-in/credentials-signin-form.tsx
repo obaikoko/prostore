@@ -63,7 +63,7 @@ const CrendentialsSignInForm = () => {
         )}
         <div className='text-center text-sm text-muted-foreground'>
           Don&apos;t have an account?{' '}
-          <Link href='/signup' target='_self' className='link'>
+          <Link href='/sign-up' target='_self' className='link'>
             Sign Up
           </Link>
         </div>
