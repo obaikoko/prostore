@@ -10,3 +10,9 @@ export const sigInDefaultValues = {
   email: '',
   password: '',
 };
+export const sigUpDefaultValues = {
+  name: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
