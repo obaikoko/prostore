@@ -30,7 +30,7 @@ const AddToCart = ({ item }: { item: CartItem }) => {
   return (
     <div className='flex-center'>
       <Button className='w-full' type='button' onClick={handleAddToCart}>
-        Add To Cart
+        <Plus/>Add To Cart
       </Button>
     </div>
   );
