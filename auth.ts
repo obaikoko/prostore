@@ -61,14 +61,12 @@ export const config = {
       session.user.role = token.role;
       session.user.name = token.name;
 
-      
-
       if (trigger === 'update') {
         session.user.name = user.name;
       }
       return session;
     },
-
+    // esLint-disable-next-line @typescript-eslint/no-explicit-any
     async jwt({ token, user, trigger, session }: any) {
       //  assign user fields to user token
       if (user) {
