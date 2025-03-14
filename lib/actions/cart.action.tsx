@@ -17,7 +17,7 @@ export const addItemToCart = async (data: CartItem) => {
     // Get session and user ID
     const session = await auth();
     const userId = session?.user?.id ? (session.user.id as string) : undefined;
-    const cart = await getMyCart();
+    // const cart = await getMyCart();
 
     // Parse and validate item
 
