@@ -5,6 +5,7 @@ import ProductPrice from '@/components/shared/product/product-price';
 import { Badge } from '@/components/ui/badge';
 import ProductImages from '@/components/shared/product/product-images';
 import AddToCart from '@/components/shared/product/add-to-cart';
+import { getMyCart } from '@/lib/actions/cart.action';
 
 const ProductDetailsPade = async (props: {
   params: Promise<{ slug: string }>;
