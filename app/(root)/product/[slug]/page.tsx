@@ -15,6 +15,7 @@ const ProductDetailsPade = async (props: {
   if (!product) {
     notFound();
   }
+  const cart = await getMyCart();
   return (
     <section>
       <div className='grid grid-cols-1 md:grid-cols-5'>
@@ -64,6 +65,7 @@ const ProductDetailsPade = async (props: {
             </div>
             {product.stock > 0 && (
               <AddToCart
+                cart={cart}
                 item={{
                   productId: product.id,
                   name: product.name,
