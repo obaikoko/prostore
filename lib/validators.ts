@@ -44,11 +44,11 @@ export const signUpFormSchema = z
 
 // cart schema
 export const cartItemSchema = z.object({
-  productId: z.string().min(3, 'Product ID must be at least 3 characters'),
-  name: z.string().min(3, 'Name must be at least 3 characters'),
-  slug: z.string().min(3, 'Slug must be at least 3 characters'),
-  qty: z.number().int().positive('Quantity must be a positive number'),
-  image: z.string().min(1, 'Product must have at least one image'),
+  productId: z.string().min(1, 'Product is required'),
+  name: z.string().min(1, 'Name is required'),
+  slug: z.string().min(1, 'Slug is required'),
+  qty: z.number().int().nonnegative('Quantity must be a positive number'),
+  image: z.string().min(1, 'Image is required'),
   price: currency,
 });
 
@@ -56,10 +56,8 @@ export const insertCartSchema = z.object({
   items: z.array(cartItemSchema),
   itemsPrice: currency,
   totalPrice: currency,
-  taxPrice: currency,
   shippingPrice: currency,
-  sessionCartId: z
-    .string()
-    .min(3, 'Session cart ID must be at least 3 characters'),
+  taxPrice: currency,
+  sessionCartId: z.string().min(1, 'Session cart id is required'),
   userId: z.string().optional().nullable(),
 });

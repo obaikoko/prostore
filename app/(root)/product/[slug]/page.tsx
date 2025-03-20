@@ -64,17 +64,19 @@ const ProductDetailsPade = async (props: {
               )}
             </div>
             {product.stock > 0 && (
-              <AddToCart
-                cart={cart}
-                item={{
-                  productId: product.id,
-                  name: product.name,
-                  slug: product.slug,
-                  qty: 1,
-                  image: product.images[0],
-                  price: product.price,
-                }}
-              />
+              <div className='flex-center'>
+                <AddToCart
+                  cart={cart}
+                  item={{
+                    productId: product.id,
+                    name: product.name,
+                    slug: product.slug,
+                    price: product.price,
+                    qty: 1,
+                    image: product.images![0],
+                  }}
+                />
+              </div>
             )}
           </CardContent>
         </Card>

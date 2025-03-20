@@ -1,10 +1,10 @@
 'use client';
 
-import { CartItem, Cart } from '@/types/index';
+import { CartItem, Cart } from '@/types';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { Minus, Plus } from 'lucide-react';
-import { toast } from 'sonner'; // ✅ Use Sonner
+import { toast } from 'sonner';
 import { addItemToCart, removeItemFromCart } from '@/lib/actions/cart.action';
 
 const AddToCart = ({ cart, item }: { cart?: Cart; item: CartItem }) => {
@@ -18,7 +18,6 @@ const AddToCart = ({ cart, item }: { cart?: Cart; item: CartItem }) => {
       return;
     }
 
-    // ✅ Correct way to show a success toast with a button
     toast.success(`${res.message} `, {
       action: {
         label: 'Go To Cart',
